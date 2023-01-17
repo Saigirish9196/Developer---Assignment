@@ -1,0 +1,42 @@
+
+<%- include('header') %>
+<% if (message.length!==0) { %> 
+  <div class="text-center alert alert-success alert-dismissible">
+    <%= message %>  
+    <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<% } %>
+ 
+<div class="container overflow-hidden text-center bottom-container">
+        <div class="row">
+          <div class="col-lg-4">
+           <div class="p-3" >
+            <form action="/fetch_data" method="post">
+            <button type="submit"  class="btn btn-info btn-lg">Fetch
+                Users
+            </button>
+            </form>
+
+           </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-3" >
+            <form action="/" method="post">
+                <button type="submit"  class="btn btn-info btn-lg">Delete User</button>
+            </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-3" >
+            <form action="/user_data" method="get">
+                <button type="submit" class="btn btn-info btn-lg">User Details</Details></button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<%- include('footer') %> 

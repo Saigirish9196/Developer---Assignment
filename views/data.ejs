@@ -1,0 +1,43 @@
+<%- include('header') %>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email_id</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.forEach((people,index) => { %>
+            <tr>
+              <th scope="row"><%=((current-1)*10)+(index+1)%> </th>
+              <td><%=people.first_name%> </td>
+              <td><%=people.last_name%></td>
+              <td><%=people.email_id%></td>
+            </tr>
+        
+        <% }) %>
+      </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+      <div class="pagination">
+        <% if (current > 1) { %>
+          <li class="page-item"><a class="page-link" href="?page=<%= current - 1 %>">Previous</a></li>
+        <% } %>
+        <% for (let i = 1; i <= pages; i++) { %>
+          <% if (i === current) { %>
+            <li class="page-item"><span class="page-link"><%= i %></span></li>
+          <% } else { %>
+            <li class="page-item"><a class="page-link" href="?page=<%= i %>"><%= i %></a></li>
+          <% } %>
+        <% } %>
+        <% if (current < pages) { %>
+          <li class="page-item"><a class="page-link" href="?page=<%= current + 1 %>">Next</a></li>
+        <% } %>
+      </div>
+    </nav>
+
+
+<%- include ('footer') %> 

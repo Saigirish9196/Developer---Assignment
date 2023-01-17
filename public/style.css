@@ -1,0 +1,62 @@
+.top-model{
+    background-color: #62B6B7;
+    background-image: url("https://www.cointab.in/wp-content/uploads/2022/09/Untitled-design-31.png");
+    text-align: left;
+    padding: 5% 0;
+
+}
+h1{
+    font-size: 5rem;
+    font-style: italic;
+    padding: 2%;
+}
+.top-model p{
+    font-size: 2.5rem;
+    font-style: italic;
+    padding: 2% ;
+}
+.bottom-container{
+    padding: 10% 0;
+}
+
+.close{
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+    text-decoration: none;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+/* footer */
+/* Zoom-effect */
+.footer:hover{
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  
+  }
+  /* footer section */
+  footer{
+    background-color: grey;
+    padding: 5% 17%;
+    text-align: center;
+  }
+  .footer{
+      font-size: 30px;
+      color: white;
+      margin: 1% 2%;
+  }
